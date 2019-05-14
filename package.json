@@ -1,0 +1,50 @@
+{
+  "name": "qcloudsms_ts",
+  "version": "0.0.1",
+  "description": "qcloudsms typescript sdk",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "jest --verbose"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:w": "DEBUG=tencentcloudsms* jest --watch --collectCoverage=false",
+    "build": "rm -rf ./dist && tsc",
+    "build:w": "rm -r ./dist && tsc -w"
+  },
+  "author": "yunli <diaolingzc@sina.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/debug": "^4.1.4",
+    "@types/jest": "^24.0.12",
+    "@types/node": "^12.0.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/request-promise-native": "^1.0.16",
+    "crypto-js": "^3.1.9-1",
+    "debug": "^4.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "jest": {
+    "rootDir": "tests",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
